@@ -1,32 +1,24 @@
 @import '../../styles/utilities/breakpoints.scss';
 @import '../../styles/utilities/colors.scss';
 
-.home-header {
+.rendered-cards {
   display: grid;
-  grid-template-areas: 'logos searchForm';
+  background-color: $dark-grey;
+  color: $white;
+}
+
+.rendered-cards--results {
+  display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 2fr 1fr;
-  background-color: $white;
+  grid-template-columns: 1fr 1fr;
   margin: 1rem;
+  grid-template-areas: 'card card';
   @media screen and (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr;
     grid-template-areas:
-      'logos'
-      'searchForm';
+      'card'
+      'card';
   }
-}
-
-.home-header--image {
-  max-width: 100%;
-}
-
-.logos {
-  grid-area: logos;
-}
-
-.search-form {
-  grid-area: searchForm;
-  margin: 1rem;
 }
