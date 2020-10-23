@@ -2,7 +2,17 @@ import React from 'react';
 
 import './RenderedCards.scss';
 
-const RenderedCards = () => {
+const RenderedCards = ({ data }: { [key: string]: any }) => {
+  const { useState, useEffect } = React;
+  const [results, setResults] = useState(null);
+
+  useEffect(() => {
+    printData();
+  }, []);
+
+  const printData = () => {
+    console.log(data.info);
+  };
 
   return (
     <section className='rendered-cards'>

@@ -45,7 +45,6 @@ const Home = () => {
             alt='characteropedia'
           />
         </div>
-        <div className='search-form'></div>
         <div className='search-form'>
           <form>
             <input
@@ -59,7 +58,7 @@ const Home = () => {
           </form>
         </div>
       </section>
-      <RenderedCards />
+      {results ? <RenderedCards data={results} /> : <h1>Loading Image</h1>}
     </section>
   );
 };
