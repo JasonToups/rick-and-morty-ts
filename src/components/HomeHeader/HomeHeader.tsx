@@ -2,7 +2,7 @@ import React from 'react';
 
 import './HomeHeader.scss';
 import logo from '../../assets/logo-RickAndMorty.png';
-import characteropedia from '../../assets/Characteropedia.svg';
+import characteropedia from '../../assets/Characteropedia.png';
 
 import Search from '../Search/Search';
 

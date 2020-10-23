@@ -4,13 +4,17 @@
     <title>Characteropedia</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="GetSchwifty-Regular, Get Schwifty" font-size="105" font-weight="normal">
-        <g id="API-Homepage-Copy" transform="translate(-417.000000, -193.000000)" fill="#000000">
-            <text id="Characteropedia">
-                <tspan x="416.4875" y="271">C</tspan>
-                <tspan x="469.1975" y="271" font-size="58">haractero</tspan>
-                <tspan x="704.2715" y="271" font-size="85">p</tspan>
-                <tspan x="739.8865" y="271" font-size="58">edia</tspan>
-            </text>
+        <g id="API-Homepage-Mockup" transform="translate(-215.000000, -229.000000)" fill="#000000">
+            <g id="Group-5" transform="translate(81.000000, 0.000000)">
+                <g id="Group-2">
+                    <text id="Characteropedia">
+                        <tspan x="133.4875" y="307">C</tspan>
+                        <tspan x="186.1975" y="307" font-size="58">haractero</tspan>
+                        <tspan x="421.2715" y="307" font-size="85">p</tspan>
+                        <tspan x="456.8865" y="307" font-size="58">edia</tspan>
+                    </text>
+                </g>
+            </g>
         </g>
     </g>
 </svg>

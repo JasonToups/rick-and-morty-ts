@@ -1,3 +1,5 @@
+@import '../../styles/utilities/breakpoints.scss';
+
 .home-header {
   display: grid;
   grid-template-areas: 'logos searchForm';
@@ -5,7 +7,7 @@
   align-items: center;
   grid-template-columns: 2fr 1fr;
   margin: 1rem;
-  @media screen and (max-width: 414px){
+  @media screen and (max-width: $breakpoint-mobile){
     
     grid-template-columns: 1fr;
     grid-template-rows: 1fr .5fr;
