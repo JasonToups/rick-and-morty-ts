@@ -3,6 +3,7 @@ import React from 'react';
 import './RenderedCards.scss';
 
 const RenderedCards = () => {
+
   return (
     <section className='rendered-cards'>
       <div className='rendered-cards--header'>
