@@ -1,0 +1,30 @@
+.home-header {
+  display: grid;
+  grid-template-areas: 'logos searchForm';
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
+  margin: 1rem;
+  @media screen and (max-width: 414px){
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .5fr;
+    grid-template-areas: 
+    'logos'
+    'searchForm';
+  }
+}
+
+.home-header--image {
+  max-width: 100%;
+}
+
+.logos {
+  grid-area: logos;
+  
+}
+
+.search-form {
+  grid-area: searchForm;
+  margin: 1rem;
+}

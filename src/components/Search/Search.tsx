@@ -1,5 +1,7 @@
-import { format } from 'path'
-import React from 'react'
+import React from 'react';
+import './Search.scss';
+
+//TODO setup 2 additional search fields as dropdown lists for status (alive, dead, unknown) and gender (female, male, genderless, or unknown)
 
 const Search = () => {
   return (

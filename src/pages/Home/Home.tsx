@@ -1,17 +1,12 @@
 import React from 'react';
-import logo from '../../assets/logo-RickAndMorty.png';
-import characteropedia from '../../assets/Characteropedia.svg';
 
-import Search from '../../components/Search/Search'
+import './Home.scss';
+import HomeHeader from '../../components/HomeHeader/HomeHeader'
 
 const Home = () => {
   return (
     <section>
-      <div className = 'header'>
-        <img src={logo} alt='rick and morty logo'/>
-        <img src={characteropedia} alt='characteropedia'/>
-      </div>
-      <Search/>
+      <HomeHeader/>
     </section>
   )
 }
