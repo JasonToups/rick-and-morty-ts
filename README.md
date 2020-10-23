@@ -29,6 +29,101 @@ The following is a prioritized list of features.
 3. The app is responsive
 4. Bonus points if you take advantage of the location and episode endpoints to build your Rick and Morty user experience
 
+# API Results
+
+## Characters
+API Endpoint:
+https://rickandmortyapi.com/api/character/
+```
+{
+  "info": {
+    "count": 671,
+    "pages": 34,
+    "next": "https://rickandmortyapi.com/api/character/?page=2",
+    "prev": null
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
+      "type": "",
+      "gender": "Male",
+      "origin": {
+        "name": "Earth (C-137)",
+        "url": "https://rickandmortyapi.com/api/location/1"
+      },
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/1",
+        "https://rickandmortyapi.com/api/episode/2",
+        ...(episode array continued) 
+      ],
+      "url": "https://rickandmortyapi.com/api/character/1",
+      "created": "2017-11-04T18:48:46.250Z"
+    },
+    ...(results array continued)
+```
+## Locations
+API endpoint: https://rickandmortyapi.com/api/location/
+
+```
+{
+  "info": {
+    "count": 108,
+    "pages": 6,
+    "next": "https://rickandmortyapi.com/api/location/?page=2",
+    "prev": null
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "Earth (C-137)",
+      "type": "Planet",
+      "dimension": "Dimension C-137",
+      "residents": [
+        "https://rickandmortyapi.com/api/character/38",
+        "https://rickandmortyapi.com/api/character/45",
+        ...(episodes array continued)
+      ],
+      "url": "https://rickandmortyapi.com/api/location/1",
+      "created": "2017-11-10T12:42:04.162Z"
+    },
+    ...(results array continued)
+```
+
+## Episodes
+Api endpoint: https://rickandmortyapi.com/api/episode/
+```
+{
+  "info": {
+    "count": 41,
+    "pages": 3,
+    "next": "https://rickandmortyapi.com/api/episode/?page=2",
+    "prev": null
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "Pilot",
+      "air_date": "December 2, 2013",
+      "episode": "S01E01",
+      "characters": [
+        "https://rickandmortyapi.com/api/character/1",
+        "https://rickandmortyapi.com/api/character/2",
+        "https://rickandmortyapi.com/api/character/35",
+        ...(characters array continued)
+      ],
+      "url": "https://rickandmortyapi.com/api/episode/1",
+      "created": "2017-11-10T12:56:33.798Z"
+    },
+    ...(results array continued)
+```
 
 
 
