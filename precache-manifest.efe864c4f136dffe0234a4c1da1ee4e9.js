@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c4f29297d8aeb6784dd77fbb73227854",
+    "revision": "e1b4ead8eb90ce30802c56dab7502f5c",
     "url": "/rick-and-morty/index.html"
   },
   {
-    "revision": "92fa79525d8abb1c9b61",
-    "url": "/rick-and-morty/static/css/main.e5da5ee4.chunk.css"
+    "revision": "85a965e02fc904e20a29",
+    "url": "/rick-and-morty/static/css/main.569b5d8f.chunk.css"
   },
   {
     "revision": "e2bda73f8fa7cc312c3c",
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rick-and-morty/static/js/2.cd3df659.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "92fa79525d8abb1c9b61",
-    "url": "/rick-and-morty/static/js/main.a00bba34.chunk.js"
+    "revision": "85a965e02fc904e20a29",
+    "url": "/rick-and-morty/static/js/main.56f0f74d.chunk.js"
   },
   {
     "revision": "8ec831075791f93706ea",
     "url": "/rick-and-morty/static/js/runtime-main.2b22dfe8.js"
   },
   {
-    "revision": "bfe774d05328cf9c509739def723adbd",
-    "url": "/rick-and-morty/static/media/Characteropedia.bfe774d0.svg"
+    "revision": "a44cbea7ff05eb33a1c2eeeb64b81908",
+    "url": "/rick-and-morty/static/media/Characteropedia.a44cbea7.png"
   },
   {
     "revision": "96a9d4f06f4d727deeda109bde00d386",
