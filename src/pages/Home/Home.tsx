@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './Home.scss';
-import '../../components/HomeHeader/HomeHeader';
-import '../../components/Search/Search';
+import '../../components/HomeHeader/HomeHeader.scss';
+import '../../components/Search/Search.scss';
 import logo from '../../assets/logo-RickAndMorty.png';
 import characteropedia from '../../assets/Characteropedia.png';
 

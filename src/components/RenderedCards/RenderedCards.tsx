@@ -11,7 +11,7 @@ const RenderedCards = ({ data }: { [key: string]: any }) => {
   }, []);
 
   const printData = () => {
-    console.log(data.info);
+    console.log(data);
   };
 
   return (
