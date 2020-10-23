@@ -33,6 +33,18 @@ The following is a prioritized list of features.
 3. The app is responsive
 4. Bonus points if you take advantage of the location and episode endpoints to build your Rick and Morty user experience
 
+# Todos
+## API Call for All Characters with Axios
+1. On page load, an api call should be made to get all of the characters from the database.
+2. Save the api response in state on the Rendered Cards component.
+## API Call for Filtered Results with Axios
+1. The results of the filtered call.
+## Cards
+1. Create single card component to pass props into it to populate the card fields. I don't think we need state on this, since we want to update the fields on the card after it renders.
+## Rendered Cards
+1. Create the rendered cards container that will take the response from the API calls and render the results. Should pass api results into the container. This will be handled with state.
+
+
 # API Results
 
 ## Characters
