@@ -1,3 +1,39 @@
+# Rick and Morty API
+
+This site uses the Rick and Morty API to render a database of characters, locations and episodes. 
+
+# Requirements
+
+Bootstrap a Create React Application perferably with Typescript.
+
+ex:
+```
+npx create-react-app my-app --template typescript
+```
+or
+```
+yarn create react-app my-app --template typescript
+```
+
+Ensure that you are using the [latest LTS node release](https://nodejs.org/en/about/releases/).
+
+Use the Rick and Morty REST API here: https://rickandmortyapi.com/documentation.
+
+Do not use one of the Rick and Morty libraries listed on the page, please use a REST client of you choice, ex: Axios.
+
+Take a look at the API docs for characters: https://rickandmortyapi.com/documentation/#character
+
+The following is a prioritized list of features.
+1. Design and build out a functioning character listing page with pagination.
+2. Users can filter the results
+3. The app is responsive
+4. Bonus points if you take advantage of the location and episode endpoints to build your Rick and Morty user experience
+
+
+
+
+
+----
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
