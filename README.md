@@ -2,7 +2,7 @@
 
 This site uses the Rick and Morty API to render a database of characters, locations and episodes. 
 
-# Requirements
+# Project Requirements
 
 Bootstrap a Create React Application perferably with Typescript.
 
@@ -125,7 +125,39 @@ Api endpoint: https://rickandmortyapi.com/api/episode/
     ...(results array continued)
 ```
 
+# Tech Requirements
 
+## Design and build out a functioning character listing page with pagination.
+
+There should be a list of characters on page load, and if we have an infinite scroll, then users could scroll indefinitely through the pagination.
+
+The character listing card should have the image of the character, their name and all info that appears from the api return to the side. 
+Under both there should be two accordion sections for location and episodes array.
+
+## Users can filter the results
+
+There should be a search bar on the page header somewhere users can search for their characters.
+
+I could do a search that possibly submits a request for every keypress. I have to see how long it takes to get the results back.
+
+Otherwise, I can just use a submit button.
+
+## The app is responsive
+
+This shouldn’t be an issue. I could use CSS grid along with column overflow to wrap the results when they reach the edge of the page. 
+
+I could do a media query to control the width of the cards, possibly.
+
+## Bonus points if you take advantage of the location and episode endpoints to build your Rick and Morty user experience
+
+I would like to see more info about the location and episodes of the character, so I could make a request from the characters api, get the return, then loop through the return and make a request for the location and episodes from the api return of the characters.
+
+## Handling Populating the Location Information
+On the Character API return, we see the origin property has the display name of the planet with name, and the next property is url. We can make a direct api request for location information from this url and display it directly.
+
+## Handling Populating the Episodes
+On the Character API return, there is an array of episodes urls. The names of the episodes are not included.
+So we could loop through the episodes array, and display the names of the episodes. When the user clicks on the episode name, and accordion pops down and displays the rest of the information.
 
 
 ----
