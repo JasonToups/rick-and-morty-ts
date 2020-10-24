@@ -10,13 +10,11 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
   const next = resultsInfo.next;
   const prev = resultsInfo.prev;
 
+  // const returnArray = [];
+
   const resultsArray = results.results;
 
-  const newArray = [{ number: 'one' }, { number: 'two' }, { number: 'three' }];
-  console.log(newArray.length);
-
   const renderCards = (array: object[], info: object) => {
-    const returnArray = [];
     console.log('rendering cards');
     interface infoValue {
       count: number;
@@ -24,41 +22,28 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
       next: string | null;
       prev: string | null;
     }
-    function printInfo(info: infoValue) {
-      console.log(info.count);
-      console.log(info.pages);
-      console.log(info.next);
-      console.log(info.prev);
-    }
-    interface arrayValue {
-      id: number;
-      name: string;
-      status: string;
-      species: string;
-      type: string;
-      gender: string;
-      origin: object;
-      location: object;
-      image: string;
-      episode: string[];
-      url: string;
-      created: string;
-    }
+    const returnArray = [];
     for (let x = 0; x < resultsArray.length; x++) {
-      console.log(resultsArray[x].image);
-      console.log(resultsArray[x].name);
-      console.log(resultsArray[x].species);
-      console.log(resultsArray[x].gender);
-      console.log(resultsArray[x].status);
-      console.log(resultsArray[x].location);
-      console.log(resultsArray[x].episode[0]);
-      console.log(resultsArray[x].episode);
+      console.log(returnArray);
+      returnArray.push(
+        <Card
+          key={resultsArray[x].id}
+          imgSrc={resultsArray[x].image}
+          imgAlt={resultsArray[x].name}
+          name={resultsArray[x].name}
+          status={resultsArray[x].status}
+          species={resultsArray[x].species}
+          gender={resultsArray[x].gender}
+          location={resultsArray[x].location}
+          episode={resultsArray[x].episode[0]}
+        />,
+      );
     }
-
-    function printArray(array: arrayValue) {}
-
-    printInfo(resultsInfo);
-    printArray(resultsArray);
+    console.log(returnArray);
+    return returnArray;
+    // printInfo(resultsInfo);
+    // printArray(resultsArray);
+    // createCards();
   };
   renderCards(resultsArray, resultsInfo);
 

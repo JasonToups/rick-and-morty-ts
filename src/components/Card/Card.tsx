@@ -2,6 +2,7 @@ import React from 'react';
 import './Card.scss';
 
 const Card = ({
+  key,
   imgSrc,
   imgAlt,
   name,
@@ -15,7 +16,7 @@ const Card = ({
   [key: string]: any;
 }) => {
   return (
-    <div className='card'>
+    <div className='card' key={key} id={key}>
       <div className='card-image--wrapper'>
         <img className='card-image' src={imgSrc} alt={imgAlt} />
       </div>
