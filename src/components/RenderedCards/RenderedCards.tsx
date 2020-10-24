@@ -3,25 +3,65 @@ import React from 'react';
 import './RenderedCards.scss';
 import Card from '../Card/Card';
 
-const RenderedCards = ({ data }: { [key: string]: any }) => {
-  const { useState, useEffect } = React;
-  const [results, setResults] = useState(null);
-  const count = data.info.count;
+const RenderedCards = ({ results }: { [key: string]: any }) => {
+  // const { useState, useEffect } = React;
+  // const [data, setData] = useState(null);
+  const count = results.info.count;
+  const resultsInfo = results.info;
+  const resultsArray = results.results;
 
-  useEffect(() => {
-    setResults(data);
-    // printData();
-  }, []);
+  // useEffect(() => {
+  //   console.log('setting data');
+  //   setData(results);
+  //   // printData();
+  // }, []);
 
-  useEffect(() => {
-    renderCards();
-  }, [results]);
+  // useEffect(() => {
+  //   if (data != null) {
+  //     console.log('we have data, rendering cards');
+  //     renderCards();
+  //   } else {
+  //     console.log('there is no data');
+  //     setData(results);
+  //   }
+  // }, [data]);
 
-  const renderCards = () => {
-    if (results != null) {
-      console.log(results);
+  const renderCards = (array: string[], info: object) => {
+    const returnArray = [];
+    console.log('rendering cards');
+    interface infoValue {
+      count: number;
+      pages: number;
+      next: string | null;
+      prev: string | null;
     }
+    function printInfo(info: infoValue) {
+      console.log(info.count);
+    }
+    interface arrayValue {
+      id: number;
+      name: string;
+      status: string;
+      species: string;
+      type: string;
+      gender: string;
+      origin: object;
+      location: object;
+      image: string;
+      episode: string[];
+      url: string;
+      created: string;
+    }
+    function printArray(results: arrayValue) {
+      console.log(results.id);
+    }
+
+    printInfo(resultsInfo);
+    // for (let x = 0; x < array.length; x++) {
+    //   printArray(array);
+    // }
   };
+  renderCards(resultsArray, resultsInfo);
 
   return (
     <section className='rendered-cards'>
@@ -29,7 +69,7 @@ const RenderedCards = ({ data }: { [key: string]: any }) => {
         <h1>Number of Results: {count}</h1>
       </div>
       <div className='rendered-cards--results'>
-        <Card />
+        <Card imgSrc='https://rickandmortyapi.com/api/character/avatar/1.jpeg' />
         <Card />
         <Card />
         <Card />

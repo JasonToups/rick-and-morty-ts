@@ -58,7 +58,7 @@ const Home = () => {
           </form>
         </div>
       </section>
-      {results ? <RenderedCards data={results} /> : <h1>Loading Results</h1>}
+      {results ? <RenderedCards results={results} /> : <h1>Loading Results</h1>}
     </section>
   );
 };
