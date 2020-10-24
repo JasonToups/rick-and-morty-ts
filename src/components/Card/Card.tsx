@@ -5,8 +5,9 @@ const Card = ({
   imgSrc,
   imgAlt,
   name,
-  status,
   species,
+  gender,
+  status,
   location,
   episodeFirst,
   episodes,
@@ -21,7 +22,7 @@ const Card = ({
       <div className='card-body'>
         <h2>{name}</h2>
         <h3>
-          {status} - {species}
+          {status} - {species} - {gender}
         </h3>
         <p>Last known location:</p>
         <p>{location}</p>

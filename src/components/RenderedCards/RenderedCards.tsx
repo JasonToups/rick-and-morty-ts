@@ -4,29 +4,18 @@ import './RenderedCards.scss';
 import Card from '../Card/Card';
 
 const RenderedCards = ({ results }: { [key: string]: any }) => {
-  // const { useState, useEffect } = React;
-  // const [data, setData] = useState(null);
-  const count = results.info.count;
   const resultsInfo = results.info;
+  const count = resultsInfo.count;
+  const pages = resultsInfo.pages;
+  const next = resultsInfo.next;
+  const prev = resultsInfo.prev;
+
   const resultsArray = results.results;
 
-  // useEffect(() => {
-  //   console.log('setting data');
-  //   setData(results);
-  //   // printData();
-  // }, []);
+  const newArray = [{ number: 'one' }, { number: 'two' }, { number: 'three' }];
+  console.log(newArray.length);
 
-  // useEffect(() => {
-  //   if (data != null) {
-  //     console.log('we have data, rendering cards');
-  //     renderCards();
-  //   } else {
-  //     console.log('there is no data');
-  //     setData(results);
-  //   }
-  // }, [data]);
-
-  const renderCards = (array: string[], info: object) => {
+  const renderCards = (array: object[], info: object) => {
     const returnArray = [];
     console.log('rendering cards');
     interface infoValue {
@@ -37,6 +26,9 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
     }
     function printInfo(info: infoValue) {
       console.log(info.count);
+      console.log(info.pages);
+      console.log(info.next);
+      console.log(info.prev);
     }
     interface arrayValue {
       id: number;
@@ -52,14 +44,21 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
       url: string;
       created: string;
     }
-    function printArray(results: arrayValue) {
-      console.log(results.id);
+    for (let x = 0; x < resultsArray.length; x++) {
+      console.log(resultsArray[x].image);
+      console.log(resultsArray[x].name);
+      console.log(resultsArray[x].species);
+      console.log(resultsArray[x].gender);
+      console.log(resultsArray[x].status);
+      console.log(resultsArray[x].location);
+      console.log(resultsArray[x].episode[0]);
+      console.log(resultsArray[x].episode);
     }
 
+    function printArray(array: arrayValue) {}
+
     printInfo(resultsInfo);
-    // for (let x = 0; x < array.length; x++) {
-    //   printArray(array);
-    // }
+    printArray(resultsArray);
   };
   renderCards(resultsArray, resultsInfo);
 
