@@ -1,29 +1,38 @@
 import React from 'react';
 
 import './RenderedCards.scss';
+import Card from '../Card/Card';
 
 const RenderedCards = ({ data }: { [key: string]: any }) => {
   const { useState, useEffect } = React;
   const [results, setResults] = useState(null);
+  const count = data.info.count;
 
   useEffect(() => {
-    printData();
+    setResults(data);
+    // printData();
   }, []);
 
-  const printData = () => {
-    console.log(data);
+  useEffect(() => {
+    renderCards();
+  }, [results]);
+
+  const renderCards = () => {
+    if (results != null) {
+      console.log(results);
+    }
   };
 
   return (
     <section className='rendered-cards'>
       <div className='rendered-cards--header'>
-        <h1>Number of Results:</h1>
+        <h1>Number of Results: {count}</h1>
       </div>
       <div className='rendered-cards--results'>
-        <h1>Card</h1>
-        <h1>Card</h1>
-        <h1>Card</h1>
-        <h1>Card</h1>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
     </section>
   );
