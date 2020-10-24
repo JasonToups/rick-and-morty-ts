@@ -3,24 +3,35 @@ import React from 'react';
 import './RenderedCards.scss';
 import Card from '../Card/Card';
 
-const RenderedCards = ({ data }: { [key: string]: any }) => {
+const RenderedCards = ({ results }: { [key: string]: any }) => {
   const { useState, useEffect } = React;
-  const [results, setResults] = useState(null);
-  const count = data.info.count;
+  const [data, setData] = useState(null);
+  const count = results.info.count;
+  const info = results.info;
+  const resultsArray = results.results;
+
+  console.log(info);
+  console.log(resultsArray);
+
+  // useEffect(() => {
+  //   console.log('setting data');
+  //   setData(results);
+  //   // printData();
+  // }, []);
 
   useEffect(() => {
-    setResults(data);
-    // printData();
-  }, []);
-
-  useEffect(() => {
-    renderCards();
-  }, [results]);
+    if (data != null) {
+      console.log('we have data, rendering cards');
+      renderCards();
+    } else {
+      console.log('there is no data');
+      setData(results);
+    }
+  }, [data]);
 
   const renderCards = () => {
-    if (results != null) {
-      console.log(results);
-    }
+    console.log('rendering cards');
+    console.log(data);
   };
 
   return (
