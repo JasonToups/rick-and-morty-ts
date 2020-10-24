@@ -27,8 +27,8 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
   // }, [data]);
 
   const renderCards = (array: string[], info: object) => {
+    const returnArray = [];
     console.log('rendering cards');
-    console.log(array);
     interface infoValue {
       count: number;
       pages: number;
@@ -38,7 +38,28 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
     function printInfo(info: infoValue) {
       console.log(info.count);
     }
+    interface arrayValue {
+      id: number;
+      name: string;
+      status: string;
+      species: string;
+      type: string;
+      gender: string;
+      origin: object;
+      location: object;
+      image: string;
+      episode: string[];
+      url: string;
+      created: string;
+    }
+    function printArray(results: arrayValue) {
+      console.log(results.id);
+    }
+
     printInfo(resultsInfo);
+    // for (let x = 0; x < array.length; x++) {
+    //   printArray(array);
+    // }
   };
   renderCards(resultsArray, resultsInfo);
 
@@ -48,7 +69,7 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
         <h1>Number of Results: {count}</h1>
       </div>
       <div className='rendered-cards--results'>
-        <Card />
+        <Card imgSrc='https://rickandmortyapi.com/api/character/avatar/1.jpeg' />
         <Card />
         <Card />
         <Card />

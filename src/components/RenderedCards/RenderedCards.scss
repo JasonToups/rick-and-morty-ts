@@ -8,19 +8,11 @@
 }
 
 .rendered-cards--results {
-  display: grid;
-  grid-template-areas: 'card card';
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  -moz-box-pack: center;
   justify-content: center;
+  -moz-box-align: center;
   align-items: center;
-  margin: 1rem;
-  gap: 1rem;
-  @media screen and (max-width: $breakpoint-mobile) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr;
-    grid-template-areas:
-      'card'
-      'card';
-  }
+  flex-wrap: wrap;
+  max-width: 1920px;
 }
-

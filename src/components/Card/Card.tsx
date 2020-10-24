@@ -15,8 +15,8 @@ const Card = ({
 }) => {
   return (
     <div className='card'>
-      <div className='card-image'>
-        <img src={imgSrc} alt={imgAlt} />
+      <div className='card-image--wrapper'>
+        <img className='card-image' src={imgSrc} alt={imgAlt} />
       </div>
       <div className='card-body'>
         <h1>{name}</h1>
