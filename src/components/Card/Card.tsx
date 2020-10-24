@@ -5,8 +5,8 @@ const Card = ({
   imgSrc,
   imgAlt,
   name,
-  living,
-  race,
+  status,
+  species,
   location,
   episodeFirst,
   episodes,
@@ -19,14 +19,14 @@ const Card = ({
         <img className='card-image' src={imgSrc} alt={imgAlt} />
       </div>
       <div className='card-body'>
-        <h1>{name}</h1>
-        <h2>
-          {living} - {race}
-        </h2>
+        <h2>{name}</h2>
+        <h3>
+          {status} - {species}
+        </h3>
         <p>Last known location:</p>
         <p>{location}</p>
         <p>First seen in:</p>
-        <p>{episodeFirst}</p>
+        <p>episode {episodeFirst}</p>
       </div>
     </div>
   );

@@ -69,7 +69,16 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
         <h1>Number of Results: {count}</h1>
       </div>
       <div className='rendered-cards--results'>
-        <Card imgSrc='https://rickandmortyapi.com/api/character/avatar/1.jpeg' />
+        <Card
+          imgSrc='https://rickandmortyapi.com/api/character/avatar/1.jpeg'
+          imgAlt='Rick Sanchez'
+          name='Rick Sanchez'
+          status='Alive'
+          species='Human'
+          gender='Male'
+          location='Earth (Replacement Dimension)'
+          episode='1'
+        />
         <Card />
         <Card />
         <Card />
