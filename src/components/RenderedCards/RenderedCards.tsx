@@ -4,14 +4,11 @@ import './RenderedCards.scss';
 import Card from '../Card/Card';
 
 const RenderedCards = ({ results }: { [key: string]: any }) => {
-  const { useState, useEffect } = React;
-  const [data, setData] = useState(null);
+  // const { useState, useEffect } = React;
+  // const [data, setData] = useState(null);
   const count = results.info.count;
-  const info = results.info;
+  const resultsInfo = results.info;
   const resultsArray = results.results;
-
-  console.log(info);
-  console.log(resultsArray);
 
   // useEffect(() => {
   //   console.log('setting data');
@@ -19,20 +16,31 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
   //   // printData();
   // }, []);
 
-  useEffect(() => {
-    if (data != null) {
-      console.log('we have data, rendering cards');
-      renderCards();
-    } else {
-      console.log('there is no data');
-      setData(results);
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data != null) {
+  //     console.log('we have data, rendering cards');
+  //     renderCards();
+  //   } else {
+  //     console.log('there is no data');
+  //     setData(results);
+  //   }
+  // }, [data]);
 
-  const renderCards = () => {
+  const renderCards = (array: string[], info: object) => {
     console.log('rendering cards');
-    console.log(data);
+    console.log(array);
+    interface infoValue {
+      count: number;
+      pages: number;
+      next: string | null;
+      prev: string | null;
+    }
+    function printInfo(info: infoValue) {
+      console.log(info.count);
+    }
+    printInfo(resultsInfo);
   };
+  renderCards(resultsArray, resultsInfo);
 
   return (
     <section className='rendered-cards'>
