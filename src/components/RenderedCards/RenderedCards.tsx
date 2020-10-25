@@ -4,17 +4,21 @@ import './RenderedCards.scss';
 import Card from '../Card/Card';
 
 const RenderedCards = ({ results }: { [key: string]: any }) => {
+  const resultsArray = results.results;
   const resultsInfo = results.info;
   const count = resultsInfo.count;
   const pages = resultsInfo.pages;
   const next = resultsInfo.next;
   const prev = resultsInfo.prev;
 
+  interface RenderedCards {
+    renderCards: Function;
+    result: object[];
+  }
+
   // const returnArray = [];
 
-  const resultsArray = results.results;
-
-  const renderCards = (array: object[], info: object) => {
+  const renderCards = (array: object[], info: object): JSX.Element[] => {
     console.log('rendering cards');
     interface infoValue {
       count: number;
@@ -22,10 +26,16 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
       next: string | null;
       prev: string | null;
     }
-    const returnArray = [];
-    for (let x = 0; x < resultsArray.length; x++) {
-      console.log(returnArray);
-      returnArray.push(
+    const holdArray = [];
+
+    // array.map(result: Card) => {
+    //   return <div>result</div>
+
+    // }
+    // TODO BUG - When I loop over the response array to push new Card components to it, it's not pushing JSX into the array. So when I go to render the array on the dom, it's not JSX, it's an object.
+    for (let x = 0; x < array.length; x++) {
+      console.log(array[x].id);
+      holdArray.push(
         <Card
           key={resultsArray[x].id}
           imgSrc={resultsArray[x].image}
@@ -39,13 +49,14 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
         />,
       );
     }
-    console.log(returnArray);
-    return returnArray;
+    const returnArray = Array.isArray(holdArray);
+    console.log(typeof returnArray);
+    return holdArray;
     // printInfo(resultsInfo);
     // printArray(resultsArray);
     // createCards();
   };
-  renderCards(resultsArray, resultsInfo);
+  // renderCards(resultsArray, resultsInfo);
 
   return (
     <section className='rendered-cards'>
@@ -53,6 +64,7 @@ const RenderedCards = ({ results }: { [key: string]: any }) => {
         <h1>Number of Results: {count}</h1>
       </div>
       <div className='rendered-cards--results'>
+        {renderCards(resultsArray, resultsInfo)}
         <Card
           imgSrc='https://rickandmortyapi.com/api/character/avatar/1.jpeg'
           imgAlt='Rick Sanchez'
