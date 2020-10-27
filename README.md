@@ -4,7 +4,7 @@ This site uses the Rick and Morty API to render a database of characters, locati
 
 The finished site can be found at:
 
-https://jasontoups.github.io/rick-and-morty/
+https://jasontoups.github.io/rick-and-morty-ts/
 
 # Project Requirements
 
